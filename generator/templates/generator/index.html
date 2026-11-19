@@ -1,0 +1,28 @@
+{% load static %}
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Django generátor naprosto zbytečných moudrostí.">
+  <title>Generátor zbytečných moudrostí</title>
+  <link rel="stylesheet" href="{% static 'generator/style.css' %}">
+</head>
+<body>
+  <main class="container">
+    <div class="eyebrow"><span class="dot"></span> DJANGO / DEMO SERVER <span class="pill">v1.0</span></div>
+    <h1>Generátor <em>zbytečných</em> moudrostí</h1>
+    <p class="lead">Malá webovka, která ti s ničím nepomůže. Ale pokaždé jinak.</p>
+
+    <section class="quote-card" aria-label="Vygenerovaná moudrost">
+      <div class="quote-icon" aria-hidden="true">“</div>
+      <p class="quote">{{ hlaska }}</p>
+      <div class="card-foot"><span>MOUDROST Č. {{ selected|add:1 }} / {{ total }}</span><span>100 % NEOVĚŘENO</span></div>
+    </section>
+
+    <a class="button" href="?previous={{ selected }}">Vygenerovat další blbost <span aria-hidden="true">↗</span></a>
+    <p class="subnote">Hlášku vybírá Python na serveru. Stránku vykresluje Django.</p>
+    <div class="footer">Vyrobeno pro test lokálu, GitHubu a hostingu.</div>
+  </main>
+</body>
+</html>
